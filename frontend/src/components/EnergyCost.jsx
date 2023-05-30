@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/energyCost.css";
+import "../styles/energycost.css";
 // import _ from "lodash";
 
 export default function EnergyCost(props) {
@@ -9,9 +9,14 @@ export default function EnergyCost(props) {
   //   };
   return (
     <>
-      <div className="energyCost" onClick={viewChange}>
-        EnergyCost
-      </div>
+      <label>消費エネルギー数</label>
+      <select id="energyNum" name="Count">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </>
   );
 }

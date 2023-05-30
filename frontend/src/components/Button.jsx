@@ -9,7 +9,14 @@ export default function Button(props) {
   //   };
   return (
     <>
-      <div className="button" onClick={viewChange}></div>
+      <div>
+        <button className="search" id="search">
+          検索
+        </button>
+        <button className="reset" id="reset">
+          リセット
+        </button>
+      </div>
     </>
   );
 }

@@ -9,9 +9,7 @@ export default function Result(props) {
   //   };
   return (
     <>
-      <div className="result" onClick={viewChange}>
-        Result
-      </div>
+      <div className="result"></div>
     </>
   );
 }
