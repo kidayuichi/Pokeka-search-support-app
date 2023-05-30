@@ -6,11 +6,13 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "mocha test && npm run lint",
     "start": "nodemon ./src/server.js",
-    "migrate": "knex migrate:latest",
-    "seed": "knex seed:run",
-    "makeSeed": "knex seed:make"
+    "makeSeed": "knex seed:make",
+    "test": "cross-env NODE_ENV=test mocha -r dotenv/config ./tests/* --exit --reporter nyan tests",
+    "makeMigration": "knex migrate:make --knexfile data/knexfile.js",
+    "migrate": "knex migrate:latest --knexfile data/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile data/knexfile.js ",
+    "seed": "knex seed:run --knexfile data/knexfile.js"
   },
   "husky": {
     "pre-commit": "pretty-quick --staged"
