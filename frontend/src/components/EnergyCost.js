@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/energycost.css";
+import "../styles/energyCost.css";
 // import _ from "lodash";
 
 export default function EnergyCost(props) {
