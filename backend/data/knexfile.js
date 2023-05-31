@@ -21,11 +21,7 @@ module.exports = {
 
   staging: {
     client: "pg",
-    connection: {
-      database: "pokemonsearch",
-      user: "user",
-      password: "user",
-    },
+    connection: DATABASE_URL,
     pool: {
       min: 2,
       max: 10,
