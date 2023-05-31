@@ -8,11 +8,8 @@ export default function Button(props) {
     console.log("ボタン押されたよ");
     const pokeArray = await fetch("http://localhost:8080/api/poke"); //.then((e) =>
     result = await pokeArray.json();
-    console.log(result);
-
-    return result;
+    props.resultNumSet(result);
   };
-  console.log(getAllPoke);
 
   return (
     <>
