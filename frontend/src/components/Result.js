@@ -22,62 +22,59 @@ export default function Result(props) {
     { Header: "消費エネルギー4", accessor: "Attack2energy4" },
     { Header: "消費エネルギー5", accessor: "Attack2energy5" },
   ];
-  const data = [{
-    "cardID": 40000,
-    "name": "ルージュラ",
-    "cardURL": "https://www.pokemon-card.com/card-search/details.php/card/40000/regu/XY",
-    "Attack1name": "げんわくダンス",
-    "Attack1damage": "30",
-    "Attack1energy1": "icon-psychic icon",
-    "Attack1energy2": "icon-none icon",
-    "Attack1energy3": "",
-    "Attack1energy4": "",
-    "Attack1energy5": ""
-  }];
-  console.log(data);
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow
-  } = useTable({
-    columns,
-    data
-  });
+  // const data = [{
+  //   "cardID": 40000,
+  //   "name": "ルージュラ",
+  //   "cardURL": "https://www.pokemon-card.com/card-search/details.php/card/40000/regu/XY",
+  //   "Attack1name": "げんわくダンス",
+  //   "Attack1damage": "30",
+  //   "Attack1energy1": "icon-psychic icon",
+  //   "Attack1energy2": "icon-none icon",
+  //   "Attack1energy3": "",
+  //   "Attack1energy4": "",
+  //   "Attack1energy5": ""
+  // }];
+  // console.log(data);
+  // const {
+  //   getTableProps,
+  //   getTableBodyProps,
+  //   headerGroups,
+  //   rows,
+  //   prepareRow
+  // } = useTable({
+  //   columns,
+  //   data
+  // });
 
   return (
-    <>
-      <table {...getTableProps()}>
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>
-                  {column.render("Header")}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
+    // <>
+    //   {/* <table {...getTableProps()}>
+    //     <thead>
+    //       {headerGroups.map((headerGroup) => (
+    //         <tr {...headerGroup.getHeaderGroupProps()}>
+    //           {headerGroup.headers.map((column) => (
+    //             <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+    //           ))}
+    //         </tr>
+    //       ))}
+    //     </thead>
 
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row, i) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
-                  return (
-                    <td {...cell.getCellProps()}>
-                      {cell.render("Cell")}
-                    </td>
-                  )
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </>
+    //     <tbody {...getTableBodyProps()}>
+    //       {rows.map((row, i) => {
+    //         prepareRow(row);
+    //         return (
+    //           <tr {...row.getRowProps()}>
+    //             {row.cells.map((cell) => {
+    //               return (
+    //                 <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+    //               );
+    //             })}
+    //           </tr>
+    //         );
+    //       })}
+    //     </tbody>
+    //   </table> */}
+    // </>
+    console.log()
   );
 }
