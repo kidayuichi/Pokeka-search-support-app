@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/skilltype.css";
-import grasslogo from "../images/1_grass.png";
+
 // import _ from "lodash";
 
 export default function SkillType(props) {
@@ -10,7 +10,6 @@ export default function SkillType(props) {
   //   };
   return (
     <>
-      <img src={grasslogo}></img>
       <label>技属性</label>
       <select id="skillType" name="Type">
         <option value="1">草</option>
@@ -31,6 +30,9 @@ export default function SkillType(props) {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
+
+      <img src={`${process.env.PUBLIC_URL}/images/1_grass.png`} />
+      <img src={`${process.env.PUBLIC_URL}/images/2_fire.png`} />
     </>
   );
 }

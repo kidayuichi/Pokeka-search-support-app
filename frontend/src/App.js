@@ -1,11 +1,12 @@
+import logo from './logo.svg';
+import './App.css';
 import React, { useEffect, useState } from "react";
-// import "../styles/app.css";
-import Damage from "./Damage"; //ダメージを記入する欄
-import Energy from "./Energy"; //消費エネルギー数を指定する欄
-import Button from "./Button"; //検索ボタン
-import Result from "./Result"; //結果表示一覧
+import Damage from "./components/Damage"; //ダメージを記入する欄
+import Energy from "./components/Energy"; //消費エネルギー数を指定する欄
+import Button from "./components/Button"; //検索ボタン
+import Result from "./components/Result"; //結果表示一覧
 
-export default function App() {
+function App() {
   // useState
   const [damage, damageSet] = useState("0");
   const [energyCost, energyCostSet] = useState("");
@@ -13,7 +14,7 @@ export default function App() {
   const [skillTypeNum, skillTypeNumSet] = useState("");
   const [resultNum, resultNumSet] = useState(""); //検索件数を出力
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   console.log(damage);
   return (
     <>
@@ -37,8 +38,10 @@ export default function App() {
       <Result
         resultNum={resultNum}
         resultNumSet={resultNumSet}
-        // ??????
+      // ??????
       />
     </>
   );
 }
+
+export default App;
