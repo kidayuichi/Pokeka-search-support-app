@@ -14,8 +14,9 @@ function App() {
   const [skillTypeNum, skillTypeNumSet] = useState("");
   const [resultNum, resultNumSet] = useState(""); //検索件数を出力
 
-  useEffect(() => { }, []);
+  // useEffect(() => { }, []);
   console.log(damage);
+  console.log(resultNum);
   return (
     <>
       <Damage damage={damage} damageSet={damageSet} />
@@ -32,7 +33,9 @@ function App() {
         damage={damage}
         energyCost={energyCost}
         skillType={skillType}
-        killTypeNum={skillTypeNum}
+        skillTypeNum={skillTypeNum}
+        resultNum={resultNum}
+        resultNumSet={resultNumSet}
       />
 
       <Result
