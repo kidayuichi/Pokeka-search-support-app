@@ -5,11 +5,21 @@ import Damage from "./components/Damage"; //ダメージを記入する欄
 import Energy from "./components/Energy"; //消費エネルギー数を指定する欄
 import Button from "./components/Button"; //検索ボタン
 import Result from "./components/Result"; //結果表示一覧
-const DATABASE_URL = process.env.DATABASE_URL;
+const URL1 = process.env.DATABASE_URL;
+const URL2 = process.env.RENDER_DB_URL;
+const host = process.env.RENDER_DB_HOST;
+const user = process.env.RENDER_DB_USER;
+const password = process.env.RENDER_DB_PASSWORD;
+const database = process.env.RENDER_DB_NAME;
 
 function App() {
   console.log("ssssssssssssss");
-  console.log(DATABASE_URL);
+  console.log(URL1);
+  console.log(URL2);
+  console.log(host);
+  console.log(user);
+  console.log(password);
+  console.log(database);
   // useState
   const [damage, damageSet] = useState("0");
   const [energyCost, energyCostSet] = useState("");
