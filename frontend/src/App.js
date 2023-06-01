@@ -14,7 +14,9 @@ const database = process.env.RENDER_DB_NAME;
 
 function App() {
   console.log("ssssssssssssss");
-  console.log(URL1);
+  console.log(
+    "postgres://user:I0VTHlppaD54WFgzwDvFCL5Ryh2ZMXeA@dpg-chrfm0rhp8ud4n2opacg-a/pokemonsearch_dyfh"
+  );
   console.log(URL2);
   console.log(host);
   console.log(user);
