@@ -18,13 +18,14 @@ module.exports = {
       tableName: "knex_migrations",
     },
   },
-
   staging: {
     client: "pg",
     connection: {
-      database: "pokemonsearch",
-      user: "user",
-      password: "user",
+      host: process.env.RENDER_DB_HOST || "dpg-chrfm0rhp8ud4n2opacg-a",
+      user: process.env.RENDER_DB_USER || "user",
+      password:
+        process.env.RENDER_DB_PASSWORD || "I0VTHlppaD54WFgzwDvFCL5Ryh2ZMXeA",
+      database: process.env.RENDER_DB_NAME || "pokemonsearch_dyfh",
     },
     pool: {
       min: 2,
