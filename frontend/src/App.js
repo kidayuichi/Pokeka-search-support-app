@@ -1,12 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import React, { useEffect, useState } from "react";
 import Damage from "./components/Damage"; //ダメージを記入する欄
 import Energy from "./components/Energy"; //消費エネルギー数を指定する欄
 import Button from "./components/Button"; //検索ボタン
 import Result from "./components/Result"; //結果表示一覧
+const DATABASE_URL = process.env.DATABASE_URL;
 
 function App() {
+  console.log("ssssssssssssss");
+  console.log(DATABASE_URL);
   // useState
   const [damage, damageSet] = useState("0");
   const [energyCost, energyCostSet] = useState("");
@@ -41,7 +44,7 @@ function App() {
       <Result
         resultNum={resultNum}
         resultNumSet={resultNumSet}
-      // ??????
+        // ??????
       />
     </>
   );
